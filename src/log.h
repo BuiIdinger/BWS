@@ -9,7 +9,8 @@
 #include "timeFunctions.h"
 
 namespace log {
-  static bool openLogFiles() noexcept;
+  void closeLogFiles() noexcept;
+  void openLogFiles() noexcept;
 
   void info(const std::string& message, const std::source_location& location = std::source_location::current()) noexcept;
   void warning(const std::string& message, const std::source_location& location = std::source_location::current()) noexcept;
